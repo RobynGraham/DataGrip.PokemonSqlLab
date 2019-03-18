@@ -1,0 +1,22 @@
+#What are all the types of pokemon that a pokemon can have?
+SELECT name FROM types;
+#What is the name of the pokemon with id 45?
+SELECT name FROM pokemons WHERE id = 45;
+#Eevee
+#How many pokemon are there?
+SELECT count(*)FROM pokemons;
+#656
+#How many types are there?
+SELECT count(*)  FROM types;
+#18
+#How many pokemon have a secondary type?
+SELECT count(*) name  FROM pokemons WHERE secondary_type  IS NOT NULL;
+#316
+#What is each pokemon's primary type?
+SELECT name, primary_type FROM pokemons;
+#What is Rufflet's secondary type?
+SELECT secondary_type FROM pokemons WHERE name = 'Rufflet';
+#18
+#What are the name of the pokemon that belong to the trainer with trainerID 303?
+SELECT p.name FROM pokemon_trainer t JOIN pokemons p ON t.pokemon_id = p.id WHERE t.trainerID = 303;
+#Wailford, Vileplume
